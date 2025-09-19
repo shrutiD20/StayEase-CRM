@@ -5,7 +5,9 @@
 # StayEase-CRM
 StayEase CRM is a Salesforce-powered rental and accommodation CRM platform, inspired by Airbnb but tailored for both short-term tourism and long-term student/professional housing.
 
-## Author 
-Name : Shruti A. Deshpande
-Linked In Profile : https://www.linkedin.com/in/shruti-d-315b03270/
-Trialhead Profile : https://www.salesforce.com/trailblazer/bahtc6cccikj3lu4y3
+## 👩‍💻 Author & Profiles  
+
+- **Author:** Shruti Deshpande  
+- **Linked In Profile:** [My Linked In Profile](https://www.linkedin.com/in/shruti-d-315b03270/)  
+- **Trailhead Profile:** [My Trailhead Profile](https://www.salesforce.com/trailblazer/bahtc6cccikj3lu4y3)  
+
