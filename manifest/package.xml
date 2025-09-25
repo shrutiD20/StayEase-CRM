@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Guest__c</members>
+        <members>Host__c</members>
+        <members>Property__c</members>
+        <members>Property_Photo__c</members>
+        <members>Booking__c</members>
+        <members>Payment__c</members>
+        <members>Complaint__c</members>
+        <name>CustomObject</name>
+    </types>
+
+    <types>
+        <members>Guest__c</members>
+        <members>Host__c</members>
+        <members>Property__c</members>
+        <members>Booking__c</members>
+        <members>Payment__c</members>
+        <members>Complaint__c</members>
+        <name>CustomTab</name>
+    </types>
+
+    <types>
+        <members>Guest Profile</members>
+        <members>Host Profile</members>
+        <members>System Administrator</members> 
+        <members>Standard User</members>	
+        <name>Profile</name>
+    </types>
+
+    <types>
+        <members>Advance_amount_for_longTerm_stay</members>
+        <members>Book_for_longterm_stay</members>
+        <members>Check_In_Before_CheckOut</members>
+        <members>Number_of_Guests</members>
+        <members>Occupancy_Limit</members>
+        <members>Amount_GreaterThan_0</members>
+        <name>ValidationRule</name>
+    </types>
+
+    <types>
+        <members>Host_Layout</members>
+        <members>Host_Layout_Limited</members>
+        <members>Guest_Layout</members>
+        <members>Property_Layout</members>
+        <members>Property_layout_Limited</members>  
+        <name>Layout</name>
+    </types>
+
+    <types>
+        <members>Occupancy_Updation</members>
+        <members>Auto_Create_Payment_Record</members>
+        <members>Booking_Availability_Check</members>
+        <members>Confirm_Booking</members>
+        <members>Update_Availability</members>
+        <name>Flow</name>
+    </types>
+
+    <types>
+    <members>Property Report</members>
+    <members>New Guests Report</members>
+    <members>Revenue Overview</members>
+    <name>Report</name>
+    </types> 
+  
+    <types>
+        <members>StayEase Insights</members>
+        <name>Dashboard</name>
+    </types>
+
+    <types>
+        
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+
+    <types>
+        <members>*</members> 
+        <name>CustomApplication</name>
+    </types>
+
+    <version>64.0</version>
+</Package>

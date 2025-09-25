@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rent_Type__c</fullName>
+    <label>Rent Type</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Per Night</fullName>
+                <default>false</default>
+                <label>Per Night</label>
+            </value>
+            <value>
+                <fullName>Per Month</fullName>
+                <default>false</default>
+                <label>Per Month</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

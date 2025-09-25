@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Guests</fullName>
+    <active>true</active>
+    <errorConditionFormula>Number_of_Guests__c &lt; 1</errorConditionFormula>
+    <errorDisplayField>Number_of_Guests__c</errorDisplayField>
+    <errorMessage>Number of guests should be 1 or more</errorMessage>
+</ValidationRule>

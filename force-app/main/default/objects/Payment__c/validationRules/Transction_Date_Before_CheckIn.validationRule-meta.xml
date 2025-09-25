@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transction_Date_Before_CheckIn</fullName>
+    <active>true</active>
+    <description>The transaction date should be on or before check-in date.</description>
+    <errorConditionFormula>Transaction_Date__c &gt; Booking__r.Check_In_Date__c</errorConditionFormula>
+    <errorDisplayField>Transaction_Date__c</errorDisplayField>
+    <errorMessage>Transaction Date cannot be after the Check-In Date of the Booking.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advance_amount_for_longTerm_stay</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISBLANK(Advance_Amount__c),
+    OR(
+        ISPICKVAL(Booking_Type__c, &quot;Student&quot;),
+        ISPICKVAL(Booking_Type__c, &quot;Working Professional&quot;)
+    )
+)</errorConditionFormula>
+    <errorMessage>Advance Amount is mandatory for Student and Working Professional bookings</errorMessage>
+</ValidationRule>

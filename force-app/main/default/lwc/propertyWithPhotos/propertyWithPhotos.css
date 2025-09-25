@@ -1,0 +1,9 @@
+.property-card {
+    --slds-c-card-color-background: #f9fafb;
+}
+.property-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

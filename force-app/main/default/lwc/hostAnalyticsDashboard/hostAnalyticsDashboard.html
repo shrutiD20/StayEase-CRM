@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Property Analytics" icon-name="standard:property">
+        <div class="slds-p-around_medium">
+            <template if:true={properties}>
+                <template for:each={properties} for:item="prop">
+                    <p key={prop.propertyId} class="slds-p-bottom_x-small">
+                        Property ID: {prop.propertyId} | Total Rent: {prop.totalRent}
+                    </p>
+                </template>
+            </template>
+            <template if:true={error}>
+                <p class="slds-text-color_error">Error loading analytics: {error.body.message}</p>
+            </template>
+            <template if:false={properties}>
+                <p>No analytics available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

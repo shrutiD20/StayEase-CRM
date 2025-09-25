@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Book_for_longterm_stay</fullName>
+    <active>true</active>
+    <description>Checks if the booking is being done for a tourists or students . if students or working professional then the check- out - date field can remain empty .</description>
+    <errorConditionFormula>AND(
+    ISBLANK(Check_Out_Date__c),
+    ISPICKVAL(Guest__r.Guest_Type__c, &quot;Tourist&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Check_Out_Date__c</errorDisplayField>
+    <errorMessage>Check-Out Date is required for Tourist bookings</errorMessage>
+</ValidationRule>

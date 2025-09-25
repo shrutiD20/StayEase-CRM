@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_GreaterThan_0</fullName>
+    <active>true</active>
+    <description>The amount to paid must be greater than zero.</description>
+    <errorConditionFormula>Rent__c  &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Rent__c</errorDisplayField>
+    <errorMessage>The rent amount should be greater than zero.</errorMessage>
+</ValidationRule>

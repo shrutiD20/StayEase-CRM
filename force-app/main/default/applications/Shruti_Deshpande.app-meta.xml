@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#EB9319</headerColor>
+        <logo>StayEase1</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>StayEase CRM is a Salesforce-powered accommodation management platform, designed to function like Airbnb while also catering to the long-term housing needs of students and professionals.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>StayEase CRM</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>PropertyBrowsePage</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Guest__c</tabs>
+    <tabs>Host__c</tabs>
+    <tabs>Booking__c</tabs>
+    <tabs>Complaint__c</tabs>
+    <tabs>Payment__c</tabs>
+    <tabs>Property__c</tabs>
+    <tabs>Property_Photo__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>StayEase_CRM_UtilityBar</utilityBar>
+</CustomApplication>

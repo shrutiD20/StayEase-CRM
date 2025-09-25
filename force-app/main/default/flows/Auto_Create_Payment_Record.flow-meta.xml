@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>This is a Record-Triggered Flow.
+Upon creation or update of a Booking__c record, this flow checks if the Status__c field is &apos;Requested&apos; and the Booking_Type__c field is &apos;Tourist&apos;. If both conditions are met, it creates a new Payment__c record with the following details: Amount__c set to Total_Rent__c from the Booking__c record, Booking__c set to the Booking__c record ID, Payment_Mode__c as &apos;UPI&apos;, Payment_Type__c as &apos;Full&apos;, Status__c as &apos;Pending&apos;, and Transaction_Date__c set to the Booking__c record&apos;s CreatedDate.
+
+Several objects and their fields worth mentioning. Below are the details (the format is given as: object_name - field_name: interaction)
+  * [&apos;Booking__c&apos;, &apos;Status__c, Booking_Type__c, Total_Rent__c, CreatedDate&apos;]
+  * [&apos;Payment__c&apos;, &apos;Amount__c, Booking__c, Payment_Mode__c, Payment_Type__c, Status__c, Transaction_Date__c&apos;]</description>
+    <environments>Default</environments>
+    <interviewLabel>Auto Create Payment Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Auto Create Payment Record</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Payment_Record</name>
+        <label>Create Payment Record</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Amount__c</field>
+            <value>
+                <elementReference>$Record.Total_Rent__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Booking__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payment_Mode__c</field>
+            <value>
+                <stringValue>UPI</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Payment_Type__c</field>
+            <value>
+                <stringValue>Full</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status__c</field>
+            <value>
+                <stringValue>Pending</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Transaction_Date__c</field>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Payment__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Payment_Record</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Requested</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Booking_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Tourist</stringValue>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

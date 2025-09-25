@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OccupancyLimit</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  NOT( ISBLANK(Number_of_Guests__c) ),
+  NOT( ISBLANK(Property__r.Max_Occupancy__c) ),
+  Number_of_Guests__c &gt; Property__r.Max_Occupancy__c
+)</errorConditionFormula>
+    <errorDisplayField>Number_of_Guests__c</errorDisplayField>
+    <errorMessage>Number of guests exceeds property maximum occupancy.</errorMessage>
+</ValidationRule>

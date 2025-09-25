@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Ratings_Sum__c</fullName>
+    <label>Booking Ratings Sum</label>
+    <summarizedField>Booking__c.Guest_Rating__c</summarizedField>
+    <summaryForeignKey>Booking__c.Property__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
