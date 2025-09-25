@@ -7,7 +7,8 @@ StayEase CRM is a Salesforce-powered rental and accommodation CRM platform, insp
 
 ## 👩‍💻 Author & Profiles  
 
-- **Author:** Shruti Deshpande  
+- **Author:** Shruti Deshpande
+- **Handoff Documentation** : [Google DOC - Link](https://docs.google.com/document/d/1O3FNYz7loFlKg2nQ8hAJbxS-U-gUe64O/edit)
 - **Linked In Profile:** [My Linked In Profile](https://www.linkedin.com/in/shruti-d-315b03270/)  
 - **Trailhead Profile:** [My Trailhead Profile](https://www.salesforce.com/trailblazer/bahtc6cccikj3lu4y3)  
 
