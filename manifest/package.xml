@@ -54,6 +54,7 @@
         <members>Booking_Availability_Check</members>
         <members>Confirm_Booking</members>
         <members>Update_Availability</members>
+        <members>Payment Integration Flow</members> 
         <name>Flow</name>
     </types>
 
@@ -79,6 +80,29 @@
         <members>*</members> 
         <name>CustomApplication</name>
     </types>
+
+
+    <types>
+        <members>DummyPaymentAPI</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>DummyPaymentAPI</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+
+
+
+    <types>
+        <members>PaymentIntegration</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PaymentTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+
+
 
     <version>64.0</version>
 </Package>
